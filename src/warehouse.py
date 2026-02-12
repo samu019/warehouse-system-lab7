@@ -10,7 +10,7 @@ class Warehouse:
     
     def add_item(self, item_id, name, quantity, price):
         """Añadir producto al almacén"""
-        if quantity < 0:
+        if quantity <= 0:
             raise ValueError("Количество должно быть положительным")
         if price < 0:
             raise ValueError("Цена должна быть положительной")

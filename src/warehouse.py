@@ -12,7 +12,7 @@ class Warehouse:
         """Añadir producto al almacén"""
         if quantity <= 0:
             raise ValueError("Количество должно быть положительным")
-        if price < 0:
+        if price <= 0:
             raise ValueError("Цена должна быть положительной")
         
         self.inventory[item_id] = {

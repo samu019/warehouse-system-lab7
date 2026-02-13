@@ -1,13 +1,20 @@
-# Análisis de herramientas SQL
+# Анализ инструментов статического анализа SQL-кода
 
-## Herramienta seleccionada: sql-lint
-- ✅ Código abierto
-- ✅ Soporte para PostgreSQL
-- ✅ Integración fácil con TeamCity
-- ✅ Feedback inmediato
-- ✅ Sin costo de licencia
+## Выбранный инструмент: sql-lint
 
-## Alternativas consideradas:
-1. pgLint: ✓ Soporte PostgreSQL, ✗ Menos activo
-2. tsqllint: ✓ Robustez, ✗ Solo SQL Server
-3. Flyway validate: ✓ Integrado, ✗ Solo sintaxis básica
+### Обоснование выбора:
+1. ✅ Поддержка PostgreSQL (наша СУБД)
+2. ✅ Бесплатное ПО с открытым кодом
+3. ✅ Простая интеграция с TeamCity (Command Line)
+4. ✅ Мгновенная обратная связь
+5. ✅ Активное сообщество и обновления
+
+### Рассмотренные альтернативы:
+| Инструмент | PostgreSQL | TeamCity | Бесплатный | Обоснование отказа |
+|------------|------------|---------|------------|-------------------|
+| pgLint     | ✓          | ✓       | ✓          | Менее активная разработка |
+| tsqllint   | ✗          | ✓       | ✓          | Только MS SQL Server |
+| Flyway validate | ✓    | ✓       | ✓          | Solo sintaxis, no análisis seguridad |
+
+## Заключение:
+sql-lint обеспечивает наилучшее соотношение функциональности и простоты интеграции для нашего проекта.
